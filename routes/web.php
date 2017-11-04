@@ -12,13 +12,13 @@
 */
 Route::get('/', "MainController@index");
 Route::group(['prefix' => 'angi'] , function() {
-    Route::get('/', "AngularController@index");
-    Route::get('getData', "AngularController@getData");
+    /*Route::get('/', "AngularController@index");
+    Route::get('getData', "AngularController@getData");*/
     Route::post('contact/send', "AngularController@sendMail");
 
-    Route::get('techGroups', "AngularController@getTechGroups");
+    /*Route::get('techGroups', "AngularController@getTechGroups");
     Route::get('techStacks', "AngularController@getTechStacks");
-    Route::get('projects', "AngularController@getProjects");
+    Route::get('projects', "AngularController@getProjects");*/
 });
 
 Route::post('/sendmail', "MainController@sendMail");
@@ -27,5 +27,3 @@ Route::post('/sendmail', "MainController@sendMail");
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
 });
-
-Route::get('dictionary/{appName}/{dict}', 'DictionaryController@show');
