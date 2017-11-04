@@ -58,6 +58,7 @@
                     <ul class="navigation">
                         <li><a href="#about-me">About me</a></li>
                         <li><a href="#projects">Portfolio</a></li>
+                        <li><a href="#contacts">Contacts</a></li>
                     </ul>
                 </div>
             </div>
@@ -68,35 +69,42 @@
             </div>
         </header>
 
-        <div class="center"><h2 class="title">About me</h2></div>
-        <div id="about-me" class="container">
-            <p>{!! $about_me_short !!}</p>
-        </div>
-
-        <div class="center"><h2 class="title">Portfolio</h2></div>
-
-        <div id="projects" class="container">
-            <div class="row">
-                @foreach($projects as $p)
-                    <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
-                        <a data-fancybox="gallery" href="{{ $p['image_url'] }}" style="display: block">
-                            <div class="project">
-                                <div class="project-image" style="background-image: url({{ $p['image_url'] }});"></div>
-                                <h3>{{ $p['name'] }}</h3>
-                            </div>
-                        </a>
-                    </div>
-                @endforeach
+        <section id="about-me">
+            <div class="center">
+                <h2 class="title">About me</h2>
             </div>
-        </div>
+            <div class="container">
+                <p>{!! $about_me_short !!}</p>
+            </div>
+        </section>
+
+        <section id="projects">
+            <div class="center"><h2 class="title">Portfolio</h2></div>
+            <div class="container">
+                <div class="row">
+                    @foreach($projects as $p)
+                        <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                            <a data-fancybox="gallery" href="{{ $p['image_url'] }}" style="display: block">
+                                <div class="project">
+                                    <div class="project-image" style="background-image: url({{ $p['image_url'] }});"></div>
+                                    <h3>{{ $p['name'] }}</h3>
+                                </div>
+                            </a>
+                        </div>
+                    @endforeach
+                </div>
+            </div>
+        </section>
 
         <footer>
-            <div class="container">
-                <h2 class="title">Contacts</h2>
-                <p>Email: <a href="mailto:tylyc.julia@gmail.com">tylyc.julia@gmail.com</a></p>
-                <br>
-                <p>Tylyk Yulia. All rights reserved © 2017</p>
-            </div>
+            <section id="contacts">
+                <div class="container">
+                    <h2 class="title">Contacts</h2>
+                    <p>Email: <a href="mailto:tylyc.julia@gmail.com">tylyc.julia@gmail.com</a></p>
+                    <br>
+                    <p>Tylyk Yulia. All rights reserved © 2017</p>
+                </div>
+            </section>
         </footer>
 
         <script type="text/javascript" src="/js/jquery.js"></script>
