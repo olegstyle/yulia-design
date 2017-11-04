@@ -10,9 +10,9 @@ It is my Portfolio WEB-page.
 0. `composer install`
 0. `php artisan key:generate`
 0. `php artisan storage:link`
+0. `php artisan voyager:install`
 0. `php artisan migrate`
 0. `php artisan db:seed`
-0. `php artisan voyager:install`
 
 ## To Do ##
 `composer dump-autoload && 
