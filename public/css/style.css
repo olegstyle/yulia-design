@@ -150,3 +150,18 @@ footer a:hover {
 #about-me {
     font-size: 16px;
 }
+
+
+@media (max-width: 768px) {
+    .navigation-wrapper {
+        display: none;
+    }
+    .header {
+        height: 450px;
+        background-size: auto 100%;
+    }
+
+    .header .big-logo {
+        top: -110px;
+    }
+}
