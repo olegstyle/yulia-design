@@ -47,6 +47,8 @@
         <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
         <link href="/css/bootstrap.min.css" rel="stylesheet">
         <link href="/css/style.css" rel="stylesheet">
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.1.25/jquery.fancybox.min.css" />
     </head>
     <body>
         <header class="header">
@@ -77,10 +79,12 @@
             <div class="row">
                 @foreach($projects as $p)
                     <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
-                        <div class="project">
-                            <div class="project-image" style="background-image: url({{ $p['image_url'] }});"></div>
-                            <h3>{{ $p['name'] }}</h3>
-                        </div>
+                        <a data-fancybox="gallery" href="{{ $p['image_url'] }}" style="display: block">
+                            <div class="project">
+                                <div class="project-image" style="background-image: url({{ $p['image_url'] }});"></div>
+                                <h3>{{ $p['name'] }}</h3>
+                            </div>
+                        </a>
                     </div>
                 @endforeach
             </div>
@@ -96,6 +100,7 @@
         </footer>
 
         <script type="text/javascript" src="/js/jquery.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.1.25/jquery.fancybox.min.js"></script>
         <script type="text/javascript" src="/js/toastr.min.js"></script>
         <script type="text/javascript" src="/js/script.js"></script>
         <link href="/css/toastr.min.css" rel="stylesheet">
