@@ -7,13 +7,6 @@
         <meta name="csrf-token" content="{{ csrf_token() }}">
         <link rel="icon" type="img/ico" href="/favicon.ico">
 
-        <!-- Chrome, Firefox OS and Opera -->
-        <meta name="theme-color" content="#4cc3bf">
-        <!-- Windows Phone -->
-        <meta name="msapplication-navbutton-color" content="#4cc3bf">
-        <!-- iOS Safari -->
-        <meta name="apple-mobile-web-app-status-bar-style" content="#4cc3bf">
-
         <title>{{ $seo_title }}</title>
         <meta property="og:title" content="{{ $seo_title }}" />
         <meta name="title" content="{{ $seo_title }}" />
