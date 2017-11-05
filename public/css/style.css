@@ -21,12 +21,12 @@ body {
     font-family: 'Merienda', cursive;
     font-size: 32px;
     color: #403f3e;
-    margin: 25px 0;
+    margin: 50px 0;
 }
 
 footer {
     border-top: 1px solid #999999;
-    margin-top: 25px;
+    margin-top: 75px;
 }
 footer, footer a {
     color: #999999;
