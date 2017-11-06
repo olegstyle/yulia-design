@@ -97,12 +97,8 @@ class MainController extends Controller {
             $projectsList[$project->id] = [
                 'id' => $project->id,
                 'name' => $project->{'name_'.$locale},
-                'gist' => $project->{'gist_'.$locale},
-                'description' => $project->{'description_'.$locale},
                 'image_url' => $imageStorage . $project->image_url,
                 'date_start' => $project->date_start,
-                'date_end' => $project->date_end,
-                'link' => $project->link,
                 'stack' => [],
                 'groups' => []
             ];
