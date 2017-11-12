@@ -165,3 +165,7 @@ footer a:hover {
         top: -110px;
     }
 }
+
+.project-col {
+    padding-bottom: 15px;
+}

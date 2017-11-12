@@ -76,7 +76,7 @@
             <div class="container">
                 <div class="row">
                     @foreach($projects as $p)
-                        <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                        <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 project-col">
                             <a data-fancybox="gallery" href="{{ $p['image_url'] }}" style="display: block">
                                 <div class="project">
                                     <div class="project-image" style="background-image: url({{ $p['image_url'] }});"></div>
