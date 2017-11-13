@@ -22,7 +22,7 @@ class LanguageSet
      */
     public function handle($request, Closure $next)
     {
-        $locale = strtolower(!empty($_COOKIE['lang']) ? $_COOKIE['lang'] : '');
+        /*$locale = strtolower(!empty($_COOKIE['lang']) ? $_COOKIE['lang'] : '');
         if ($locale != 'ru' && $locale != 'en') {
             if (!empty($_SERVER['HTTP_ACCEPT_LANGUAGE'])) {
                 $locale = (substr($_SERVER['HTTP_ACCEPT_LANGUAGE'], 0, 2));
@@ -36,6 +36,8 @@ class LanguageSet
             }
         }
         Lang::setLocale($locale);
+        */
+        Lang::setLocale('en');
         return $next($request);
     }
 }
