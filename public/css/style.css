@@ -164,6 +164,9 @@ footer a:hover {
     .header .big-logo {
         top: -110px;
     }
+    html, body {
+        overflow-x: hidden;
+    }
 }
 
 .project-col {
