@@ -49,7 +49,7 @@
             $(document).ready(function () {
                 AOS.init();
             });
-        </script>`
+        </script>
     </head>
     <body>
         <header id="header" class="header">
