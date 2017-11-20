@@ -102,7 +102,7 @@ $(function () {
 
            $('html, body').animate({
                scrollTop: $($.attr(this, 'href')).offset().top
-           }, $($.attr(this, 'href')).offset().top / 1.2);
+           }, ($(this).offset().top + $($.attr(this, 'href')).offset().top) / 1.2);
        });
    });
 });

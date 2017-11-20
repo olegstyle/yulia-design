@@ -49,10 +49,10 @@
             $(document).ready(function () {
                 AOS.init();
             });
-        </script>
+        </script>`
     </head>
     <body>
-        <header class="header">
+        <header id="header" class="header">
             <div class="navigation-wrapper">
                 <div class="container">
                     <img class="logo" src="{{ asset('images/logo-white.png') }}" alt="Tylyk Yulia designer" data-aos="fade-right" data-aos-duration="2500" />
@@ -100,6 +100,8 @@
                 </div>
             </div>
         </section>
+
+        <a href="#header" class="to-top"></a>
 
         <footer>
             <section id="contacts">
