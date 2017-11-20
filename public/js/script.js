@@ -85,14 +85,14 @@ $(function () {
                return false;
            }
            toastr["info"](BODev.Lang.sending);
-           $.ajax('/sendmail', {
+           $.ajax('/angi/contact/send', {
                type: "POST",
                data: form.serialize(),
                precessData: false,
            }).done(function () {
                toastr["success"](BODev.Lang.send_success);
                form.trigger('reset');
-               form.find('input[name="name"], input[name="email"], textarea[name="message"]').addClass('empty');
+               if (window.grecaptcha) grecaptcha.reset();
            });
            return false;
        });

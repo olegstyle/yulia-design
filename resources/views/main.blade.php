@@ -104,9 +104,35 @@
         <footer>
             <section id="contacts">
                 <div class="container" data-aos="zoom-left">
-                    <h2 class="title">Contacts</h2>
-                    <p>Email: <a href="mailto:tylyc.julia@gmail.com">tylyc.julia@gmail.com</a></p>
-                    <br>
+                    <div class="row">
+                        <div class="col-sm-6 col-xs-12">
+                            <h2 class="title">Contacts</h2>
+                            <p>Email: <a href="mailto:tylyc.julia@gmail.com">tylyc.julia@gmail.com</a></p>
+                        </div>
+                        <div class="col-sm-6 col-xs-12">
+                            <h2 class="title">Send a message to me</h2>
+                            <form id="contact-me" class="form-horizontal" method="POST" action="/angi/contact/send">
+                                <div class="form-group">
+                                    <label for="contact-name" class="control-label">Name</label>
+                                    <input id="contact-name" name="name" class="form-control" placeholder="Name">
+                                </div>
+                                <div class="form-group">
+                                    <label for="contact-email" class="control-label">Email</label>
+                                    <input id="contact-email" name="email" type="email" class="form-control" placeholder="Email">
+                                </div>
+                                <div class="form-group">
+                                    <label for="contact-message" class="control-label">Message</label>
+                                    <textarea id="contact-message" name="message" class="form-control" rows="3" placeholder="Message"></textarea>
+                                </div>
+                                <div class="form-group">
+                                    {!! Recaptcha::render() !!}
+                                </div>
+                                <div class="form-group">
+                                    <button class="btn btn-success">Send</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
                     <p>Tylyk Yulia. All rights reserved © 2017</p>
                 </div>
             </section>
@@ -114,6 +140,7 @@
 
         <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.1.25/jquery.fancybox.min.js"></script>
         <script type="text/javascript" src="/js/toastr.min.js"></script>
+
         <script type="text/javascript" src="/js/script.js"></script>
         <link href="/css/toastr.min.css" rel="stylesheet">
     </body>

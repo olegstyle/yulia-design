@@ -9,6 +9,8 @@
 namespace App\Http\Controllers;
 
 
+use App\Http\Requests\ContactSendRequest;
+use App\Mail\ContactMail;
 use App\Project;
 use App\ProjectTechnicalStack;
 use App\TechnicalStack;
@@ -140,21 +142,15 @@ class MainController extends Controller {
         return view('main', $data);
     }
 
-    public function sendMail(Request $request) {
-        $data = array(
-            'name' => $request->input('name', ''),
-            'email' => $request->input('email', ''),
-            'bodyMessage' => $request->input('message', ''),
-        );
-        if (empty($data['name']) || empty($data['email']) || empty($data['bodyMessage'])) {
-            return response('', 400);
-        }
-
-        Mail::send('mail', $data, function($message) {
-            $message->from('no-reply@bodev.pro', 'BODev.PRO');
-            $message->to('olegstyle1@gmail.com', 'Borisenko Oleg')->subject
-            ("New message at BODev.PRO");
-        });
-        return response('', 200);
+    /**
+     * sendMail
+     * @author Oleh Borysenko <oleg.borisenko@morefromit.com>
+     * @param ContactSendRequest $request
+     * @return \Response
+     */
+    public function sendMail(ContactSendRequest $request)
+    {
+        Mail::send(new ContactMail($request->input('name'), $request->input('email'), $request->input('message')));
+        return response(['success' => true]);
     }
 }

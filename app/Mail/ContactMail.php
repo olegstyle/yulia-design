@@ -44,10 +44,10 @@ class ContactMail extends Mailable
      */
     public function build()
     {
-        return $this->from('olegstyle1@gmail.com')
-            ->to('olegstyle1@gmail.com')
+        return $this->from('tylyc.julia@gmail.com')
+            ->to('tylyc.julia@gmail.com')
             ->replyTo($this->email)
-            ->subject('New message from BODev.pro')
+            ->subject('New message from Yulia.BODev.pro')
             ->view('mail.contact');
     }
 }
