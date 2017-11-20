@@ -42,20 +42,28 @@
         <link href="/css/style.css" rel="stylesheet">
 
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.1.25/jquery.fancybox.min.css" />
+        <script type="text/javascript" src="/aos/aos.js"></script>
+        <link href="/aos/aos.css" rel="stylesheet">
+        <script type="text/javascript" src="/js/jquery.js"></script>
+        <script>
+            $(document).ready(function () {
+                AOS.init();
+            });
+        </script>
     </head>
     <body>
         <header class="header">
             <div class="navigation-wrapper">
                 <div class="container">
-                    <img class="logo" src="{{ asset('images/logo-white.png') }}" alt="Tylyk Yulia designer" />
-                    <ul class="navigation">
+                    <img class="logo" src="{{ asset('images/logo-white.png') }}" alt="Tylyk Yulia designer" data-aos="fade-right" data-aos-duration="2500" />
+                    <ul class="navigation" data-aos="fade-down-left" data-aos-duration="2500">
                         <li><a href="#about-me">About me</a></li>
                         <li><a href="#projects">Portfolio</a></li>
                         <li><a href="#contacts">Contacts</a></li>
                     </ul>
                 </div>
             </div>
-            <div class="big-logo-wrapper">
+            <div class="big-logo-wrapper" data-aos="zoom-out-up" data-aos-duration="2500">
                 <div class="big-logo">
                     <img src="{{ asset('images/logo-big.png') }}" alt="Tylyk Yulia designer">
                 </div>
@@ -64,20 +72,24 @@
 
         <section id="about-me">
             <div class="center">
-                <h2 class="title">About me</h2>
+                <h2 class="title" data-aos="zoom-left">About me</h2>
             </div>
-            <div class="container">
+            <div class="container" data-aos="zoom-out-left">
                 <p>{!! $about_me_short !!}</p>
             </div>
         </section>
 
         <section id="projects">
-            <div class="center"><h2 class="title">Portfolio</h2></div>
+            <div class="center"><h2 class="title" data-aos="zoom-left">Portfolio</h2></div>
             <div class="container">
                 <div class="row">
                     @foreach($projects as $p)
                         <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 project-col">
-                            <a data-fancybox="gallery" href="{{ $p['image_url'] }}" style="display: block">
+                            <a data-fancybox="gallery"
+                               href="{{ $p['image_url'] }}"
+                               style="display: block"
+                               data-aos="flip-left"
+                               data-aos-duration="900">
                                 <div class="project">
                                     <div class="project-image" style="background-image: url({{ $p['image_url'] }});"></div>
                                     <h3>{{ $p['name'] }}</h3>
@@ -91,7 +103,7 @@
 
         <footer>
             <section id="contacts">
-                <div class="container">
+                <div class="container" data-aos="zoom-left">
                     <h2 class="title">Contacts</h2>
                     <p>Email: <a href="mailto:tylyc.julia@gmail.com">tylyc.julia@gmail.com</a></p>
                     <br>
@@ -100,7 +112,6 @@
             </section>
         </footer>
 
-        <script type="text/javascript" src="/js/jquery.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.1.25/jquery.fancybox.min.js"></script>
         <script type="text/javascript" src="/js/toastr.min.js"></script>
         <script type="text/javascript" src="/js/script.js"></script>

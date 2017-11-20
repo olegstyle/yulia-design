@@ -169,3 +169,9 @@ footer a:hover {
 .project-col {
     padding-bottom: 25px;
 }
+
+@media (min-width: 768px) {
+    #about-me .container {
+        width: 750px;
+    }
+}
