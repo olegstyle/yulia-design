@@ -68,6 +68,7 @@ footer a:hover {
 
 .header .navigation {
     float: right;
+    list-style: none;
 }
 
 .header .navigation li {
@@ -151,11 +152,33 @@ footer a:hover {
     font-size: 16px;
 }
 
+@media (max-width: 991px) {
+    .header {
+        height: 500px;
+    }
+}
 
-@media (max-width: 768px) {
-    .navigation-wrapper {
+@media (max-width: 767px) {
+    .navigation-wrapper .logo {
         display: none;
     }
+    .navigation-wrapper {
+        text-align: center;
+    }
+    .header .navigation {
+        float: none;
+        padding: 0;
+        margin: 0;
+        display: inline-block;
+    }
+    .header .navigation li a {
+        font-size: 18px;
+    }
+
+    .header .navigation li:last-of-type a {
+        padding-right: 15px;
+    }
+
     .header {
         height: 450px;
         background-size: auto 100%;
