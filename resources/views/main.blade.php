@@ -133,7 +133,7 @@
                             </div>
                         </form>
                     </div>
-                    <p>Tylyk Yulia. All rights reserved © 2017</p>
+                    <p>Tylyk Yulia. All rights reserved © 2017 - {{ date('Y') }}</p>
                 </div>
             </section>
         </footer>
