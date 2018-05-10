@@ -1,13 +1,6 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: olegs
- * Date: 18.01.2017
- * Time: 8:59
- */
 
 namespace App\Http\Controllers;
-
 
 use App\Http\Requests\ContactSendRequest;
 use App\Mail\ContactMail;
@@ -15,18 +8,38 @@ use App\Project;
 use App\ProjectTechnicalStack;
 use App\TechnicalStack;
 use App\TechnicalStackGroup;
-use Illuminate\Http\Request;
+use Illuminate\Http\JsonResponse;
 use Illuminate\Support\Facades\Lang;
 use Illuminate\Support\Facades\Mail;
-use TCG\Voyager\Voyager;
+use Illuminate\View\View;
 
-class MainController extends Controller {
-    /**
-     * Show the profile for the given user.
-     *
-     * @return \Response
-     */
-    public function index() {
+/**
+ * Class MainController
+ * @package App\Http\Controllers
+ *
+ * @author Oleh Borysenko <olegstyle1@gmail.com>
+ */
+class MainController extends Controller
+{
+    public function index(): View
+    {
+        return view('main', $this->prepareData());
+    }
+
+    public function indexV2(): View
+    {
+        return view('main_v2', $this->prepareData());
+    }
+
+    public function sendMail(ContactSendRequest $request): JsonResponse
+    {
+        Mail::send(new ContactMail($request->input('name'), $request->input('email'), $request->input('message')));
+
+        return response()->json(['success' => true]);
+    }
+
+    private function prepareData(): array
+    {
         $locale = Lang::getLocale();
         $imageStorage = '/storage/';
 
@@ -98,7 +111,7 @@ class MainController extends Controller {
         foreach ($projects as &$project) {
             $projectsList[$project->id] = [
                 'id' => $project->id,
-                'name' => $project->{'name_'.$locale},
+                'name' => $project->{'name_' . $locale},
                 'image_url' => $imageStorage . $project->image_url,
                 'date_start' => $project->date_start,
                 'stack' => [],
@@ -112,7 +125,7 @@ class MainController extends Controller {
                     }
                 }
             }
-            usort($projectsList[$project->id]['stack'], function($a, $b) {
+            usort($projectsList[$project->id]['stack'], function ($a, $b) {
                 if (!isset($a['group_id']) || !isset($b['group_id'])) {
                     return 0;
                 }
@@ -139,18 +152,6 @@ class MainController extends Controller {
         $data['seo_description'] = setting('site.seo_description');
         $data['seo_image'] = '/images/me.jpg';
 
-        return view('main', $data);
-    }
-
-    /**
-     * sendMail
-     * @author Oleh Borysenko <oleg.borisenko@morefromit.com>
-     * @param ContactSendRequest $request
-     * @return \Response
-     */
-    public function sendMail(ContactSendRequest $request)
-    {
-        Mail::send(new ContactMail($request->input('name'), $request->input('email'), $request->input('message')));
-        return response(['success' => true]);
+        return $data;
     }
 }

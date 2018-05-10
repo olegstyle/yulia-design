@@ -13,11 +13,20 @@ It is my Portfolio WEB-page.
 0. `php artisan voyager:install`
 0. `php artisan migrate`
 0. `php artisan db:seed`
+0. `npm install`
+0. `npm run production`
 
 ## To Do ##
-`composer dump-autoload && 
+
+after each git pull
+
+```
+composer install && 
 php artisan cache:clear && 
-php artisan migrate && ng build` after each git pull
+php artisan migrate &&
+npm install &&
+npm run production
+```
 
 ## To Do on hosting ##
 `php-7.1 composer.phar dump-autoload && 
@@ -26,8 +35,17 @@ php artisan migrate && ng build` after each git pull
  
 ## Used frameworks
 
-[Laravel](http://laravel.com/) <br>
-[bootstrap3](http://bootstrap3.com/).
+[Laravel](http://laravel.com/) 
+
+[Bootstrap3](http://bootstrap3.com/)
+
+[JQuery](https://jquery.com/)
+
+[Toastr](http://codeseven.github.io/toastr/)
+
+[AOS](http://michalsnik.github.io/aos/)
+
+[FancyBox](https://www.fancyapps.com/fancybox/3/)
 
 ## License
 [MIT license](http://opensource.org/licenses/MIT).

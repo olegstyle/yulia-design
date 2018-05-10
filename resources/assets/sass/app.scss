@@ -1,16 +1,28 @@
 
 // Fonts
-@import url(https://fonts.googleapis.com/css?family=Roboto:300,400,600);
-@import url(https://fonts.googleapis.com/icon?family=Material+Icons);
+@font-face {
+  font-family: 'Gothic';
+  src: url('../fonts/gothic.ttf');
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'Gothic';
+  src: url('../fonts/gothicb.ttf');
+  font-weight: bold;
+}
 
 // Variables
 @import "variables";
 
-// Bootstrap
-@import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
+// Bootstrap - /assets/stylesheets/bootstrap
+@import "~bootstrap-sass/assets/stylesheets/bootstrap";
+@import "~toastr/toastr";
+@import "~aos/dist/aos.css";
+@import "~@fancyapps/fancybox/dist/jquery.fancybox";
 
 body {
-  font-family: "Roboto", sans-serif;
+  font-family: "Gothic", sans-serif;
 }
 
 

@@ -11,6 +11,8 @@
 |
 */
 Route::get('/', "MainController@index");
+Route::get('/v1', "MainController@index");
+Route::get('/v2', "MainController@indexV2");
 Route::group(['prefix' => 'angi'] , function() {
     /*Route::get('/', "AngularController@index");
     Route::get('getData', "AngularController@getData");*/
