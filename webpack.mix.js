@@ -14,4 +14,5 @@ const { mix } = require('laravel-mix');
 mix.js('resources/assets/js/app.js', 'public/build/v2/js')
     .sass('resources/assets/sass/app.scss', 'public/build/v2/css')
     .copy('resources/assets/fonts', 'public/fonts')
+    .copy('resources/assets/images_v2', 'public/images_v2')
     .version();

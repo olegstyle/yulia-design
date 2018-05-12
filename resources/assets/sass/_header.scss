@@ -7,86 +7,147 @@
   /* MARK - CAMERA */
 
   .camera-flower {
-    width: 150px;
+    width: 10%;
     height: 300px;
-    background: url("../images/v2/fl_header_left_cam.png") no-repeat left top transparent;
+    max-width: 187px;
+    background: url("../images_v2/fl_header_left_cam.png") no-repeat left top transparent;
+    background-size: 100% auto;
     position: absolute;
     top: 0;
     left: 0;
+    transition: all 0.5s ease;
   }
 
   .camera {
-    width: 225px;
-    height: 160px;
-    background: url("../images/v2/header_cam.png") no-repeat center transparent;
+    width: 15%;
+    height: 250px;
+    max-width: 225px;
+    background: url("../images_v2/header_cam.png") no-repeat left top transparent;
+    background-size: 100% auto;
     position: absolute;
     top: 0;
     left: 0;
+    transition: all 0.5s ease;
 
     &:after {
       content: "";
       display: block;
-      width: 37px;
+      width: 14%;
       height: 50px;
-      background: url("../images/v2/fl_header_left_cam_2.png") no-repeat left top transparent;
+      max-width: 38px;
+      background: url("../images_v2/fl_header_left_cam_2.png") no-repeat left top transparent;
+      background-size: 100% auto;
       position: absolute;
       top: 0;
-      right: -35px;
+      right: -13%;
+      transition: all 0.5s ease;
     }
   }
 
   /* MARK - COMPUTER */
 
   .computer-wrapper {
-    $computer_img_width: 840px;
-    $computer_img_height: 133px;
+    $computer_img_width: 60%;
+    $computer_img_height: 400px;
     width: $computer_img_width;
     height: $computer_img_height;
+    max-width: 840px;
     position: absolute;
     top: 0;
     left: 50%;
+    transition: all 0.5s ease;
 
     .computer-subwrapper {
-      width: $computer_img_width;
+      width: 100%;
       height: $computer_img_height;
+      max-width: 840px;
       position: relative;
       left: -50%;
+      transition: all 0.5s ease;
 
       .computer {
-        width: $computer_img_width;
+        width: 100%;
         height: $computer_img_height;
-        background: url('../images/v2/komp.png') no-repeat center transparent;
+        max-width: 840px;
+        background: url('../images_v2/komp.png') no-repeat center top transparent;
+        background-size: 100% auto;
         position: absolute;
         top: 0;
         left: 0;
+        transition: all 0.5s ease;
       }
 
       .usb {
-        width: 230px;
-        height: 170px;
-        background: url('../images/v2/usb.png') no-repeat top right transparent;
+        width: 26%;
+        height: 400px;
+        max-width: 203px;
+        background: url('../images_v2/usb.png') no-repeat top right transparent;
+        background-size: 100% auto;
         position: absolute;
         top: -5px;
-        left: -45px;
+        left: -5%;
+        transition: all 0.5s ease;
       }
 
       .paper {
-        width: 362px;
-        height: 312px;
-        background: url('../images/v2/papers.png') no-repeat left top transparent;
+        width: 42%;
+        height: 450px;
+        max-width: 362px;
+        background: url('../images_v2/papers.png') no-repeat left top transparent;
+        background-size: 100% auto;
         position: absolute;
         top: 0;
-        right: -160px;
+        right: -16%;
+        transition: all 0.5s ease;
       }
     }
   }
 
   .phone {
-    width: 115px;
-    height: 175px;
-    background: url('../images/v2/header_phone.png') no-repeat right top transparent;
+    width: 8%;
+    height: 400px;
+    max-width: 114px;
+    background: url('../images_v2/header_phone.png') no-repeat right top transparent;
+    background-size: 100% auto;
     position: absolute;
     top: 0;
-    right: 10px;
+    right: 1%;
+    transition: all 0.5s ease;
+  }
+
+  .flower-right {
+    width: 4%;
+    height: 500px;
+    max-width: 63px;
+    background: url('../images_v2/fl_header_right.png') no-repeat right top transparent;
+    background-size: 100% auto;
+    position: absolute;
+    top: 100px;
+    right: 0;
+    transition: all 0.5s ease;
+  }
+
+  .wizitka {
+    width: 17%;
+    max-width: 240px;
+    height: 300px;
+    background: url('../images_v2/wisitka.png') no-repeat right top transparent;
+    background-size: 100% auto;
+    position: absolute;
+    top: 335px;
+    right: 0;
+    transition: all 0.5s ease;
+  }
+
+  .book {
+    width: 30%;
+    max-width: 420px;
+    height: 420px;
+    background: url('../images_v2/book.png') no-repeat left top transparent;
+    background-size: 100% auto;
+    position: absolute;
+    top: 290px;
+    left: 0;
+    transition: all 0.5s ease;
   }
 }

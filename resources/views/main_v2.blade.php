@@ -53,6 +53,9 @@
         </div>
     </div>
     <div class="phone"></div>
+    <div class="flower-right"></div>
+    <div class="wizitka"></div>
+    <div class="book"></div>
 </header>
 
 <script src="{{ mix('build/v2/js/app.js') }}"></script>
