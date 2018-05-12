@@ -146,7 +146,7 @@
     background: url('../images_v2/book.png') no-repeat left top transparent;
     background-size: 100% auto;
     position: absolute;
-    top: 290px;
+    top: 350px;
     left: 0;
     transition: all 0.5s ease;
   }
@@ -163,7 +163,7 @@
       background: url('../images_v2/web.png') no-repeat left bottom transparent;
       position: absolute;
       top: -40px;
-      left: -20px;
+      left: -5px;
       transition: all 0.5s ease;
     }
 
@@ -193,6 +193,38 @@
         .btn-main {
           @include btn_default;
         }
+      }
+    }
+
+    .designer {
+      font-family: "Open Sans", sans-serif;
+      font-size: 170px;
+      font-weight: bold;
+      position: relative;
+      top: 30px;
+
+      .designer-light {
+        color: $primary-color;
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+      .designer-dark {
+        color: $primary-dark-color;
+        position: absolute;
+        top: 3px;
+        left: 3px;
+        text-shadow: 2px 2px 9px rgba(0, 0, 0, 0.21);
+      }
+
+      .designer-flowers {
+        width: 150px;
+        height: 157px;
+        background: url('../images_v2/fl_in_designer.png') no-repeat center right transparent;
+        background-size: 100% auto;
+        position: absolute;
+        top: 5px;
+        right: -25px;
       }
     }
   }

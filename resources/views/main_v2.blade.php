@@ -55,7 +55,6 @@
     <div class="phone"></div>
     <div class="flower-right"></div>
     <div class="wizitka"></div>
-    <div class="book"></div>
 
     <div class="header-content">
         <div class="web-img"></div>
@@ -64,7 +63,14 @@
             <li><a class="btn btn-link btn-main" href="#about_me">@lang('main.about_me')</a></li>
             <li><a class="btn btn-link" href="#contacts">@lang('main.contacts')</a></li>
         </ul>
+        <div class="designer">
+            <div class="designer-flowers"></div>
+            <div class="designer-dark">DESIGNER</div>
+            <div class="designer-light">DESIGNER</div>
+        </div>
     </div>
+
+    <div class="book"></div>
 </header>
 
 <script src="{{ mix('build/v2/js/app.js') }}"></script>
