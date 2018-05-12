@@ -14,3 +14,36 @@
     background-color: $primary-dark-color;
   }
 }
+
+@mixin text_with_lines {
+  position: relative;
+  text-transform: uppercase;
+
+  &:before, &:after {
+    content: "";
+    width: 40px;
+    border: 1px solid $text-color;
+    position: absolute;
+    top: calc(50% - 1px);
+
+    @media (max-width: 970px) {
+      width: 20px;
+    }
+  }
+
+  &:before {
+    left: -60px;
+
+    @media (max-width: 970px) {
+      left: -20px;
+    }
+  }
+
+  &:after {
+    right: -60px;
+
+    @media (max-width: 970px) {
+      right: -20px;
+    }
+  }
+}

@@ -74,6 +74,16 @@
             <div class="prelest">Prelest*</div>
             <div class="my-name">Yulia Tylyk</div>
         </div>
+
+        <div class="clearfix"></div>
+
+        <div class="its-my-portfolio">PORTFOLIO</div>
+
+        <div class="clearfix"></div>
+
+        <div class="portfolio-dates">
+            2017 - {{ date('Y') }}
+        </div>
     </div>
 
     <div class="book"></div>

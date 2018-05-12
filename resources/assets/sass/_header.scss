@@ -310,7 +310,7 @@
 
         @media (min-width: 1300px) {
           & {
-            font-size: 80px;
+            font-size: 100px;
           }
         }
       }
@@ -326,6 +326,33 @@
           & {
             font-size: 24px;
           }
+        }
+      }
+    }
+
+    .its-my-portfolio {
+      @include text_with_lines;
+      display: inline-block;
+      font-size: 2.35vw;
+      margin-top: 30px;
+      letter-spacing: 15px;
+      padding-left: 15px;
+
+      @media (min-width: 1300px) {
+        & {
+          font-size: 24px;
+        }
+      }
+    }
+
+    .portfolio-dates {
+      display: inline-block;
+      font-size: 2vw;
+      margin-top: 10px;
+
+      @media (min-width: 1300px) {
+        & {
+          font-size: 18px;
         }
       }
     }
