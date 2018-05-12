@@ -5,5 +5,12 @@
   color: #fff;
   border-radius: 5px;
   border-bottom: 4px solid $primary-dark-color;
+  text-decoration: none;
   text-transform: uppercase;
+  transition: all 0.5s ease;
+
+  &:hover {
+    text-decoration: none;
+    background-color: $primary-dark-color;
+  }
 }

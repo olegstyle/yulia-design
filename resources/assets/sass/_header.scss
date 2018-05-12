@@ -160,17 +160,18 @@
       width: 28%;
       height: 100px;
       max-width: 204px;
-      background: url('../images_v2/web.png') no-repeat left top transparent;
+      background: url('../images_v2/web.png') no-repeat left bottom transparent;
       position: absolute;
-      top: -50px;
-      left: 0;
+      top: -40px;
+      left: -20px;
+      transition: all 0.5s ease;
     }
 
     .menu {
       padding: 0;
       position: absolute;
       top: 0;
-      left: 30%;
+      left: 20%;
 
       li {
         list-style: none;
@@ -186,6 +187,7 @@
         .btn-link {
           padding-left: 30px;
           padding-right: 30px;
+          transition: all 0.5s ease;
         }
 
         .btn-main {
