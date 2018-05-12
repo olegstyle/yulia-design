@@ -150,4 +150,48 @@
     left: 0;
     transition: all 0.5s ease;
   }
+
+  .header-content {
+    max-width: 840px;
+    margin: 225px auto 0;
+    position: relative;
+
+    .web-img {
+      width: 28%;
+      height: 100px;
+      max-width: 204px;
+      background: url('../images_v2/web.png') no-repeat left top transparent;
+      position: absolute;
+      top: -50px;
+      left: 0;
+    }
+
+    .menu {
+      padding: 0;
+      position: absolute;
+      top: 0;
+      left: 30%;
+
+      li {
+        list-style: none;
+        float: left;
+
+        .btn {
+          color: $header-text-color;
+          font-weight: bold;
+          font-size: 18px;
+          text-transform: uppercase;
+        }
+
+        .btn-link {
+          padding-left: 30px;
+          padding-right: 30px;
+        }
+
+        .btn-main {
+          @include btn_default;
+        }
+      }
+    }
+  }
 }

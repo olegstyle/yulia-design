@@ -56,6 +56,15 @@
     <div class="flower-right"></div>
     <div class="wizitka"></div>
     <div class="book"></div>
+
+    <div class="header-content">
+        <div class="web-img"></div>
+        <ul class="menu">
+            <li><a class="btn btn-link" href="#portfolio">@lang('main.portfolio')</a></li>
+            <li><a class="btn btn-link btn-main" href="#about_me">@lang('main.about_me')</a></li>
+            <li><a class="btn btn-link" href="#contacts">@lang('main.contacts')</a></li>
+        </ul>
+    </div>
 </header>
 
 <script src="{{ mix('build/v2/js/app.js') }}"></script>

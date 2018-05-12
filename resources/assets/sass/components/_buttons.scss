@@ -1,0 +1,9 @@
+@mixin btn_default {
+  font-family: Gothic, sans-serif;
+  font-weight: bold;
+  background-color: $primary-color;
+  color: #fff;
+  border-radius: 5px;
+  border-bottom: 4px solid $primary-dark-color;
+  text-transform: uppercase;
+}
