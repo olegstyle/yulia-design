@@ -250,6 +250,7 @@
       font-weight: bold;
       position: relative;
       top: 50px;
+      @include no_select;
 
       * {
         transition: none;
@@ -291,6 +292,41 @@
         position: absolute;
         top: 40px;
         right: -2%;
+      }
+    }
+
+    .my-name-wrapper {
+      display: inline-block;
+      color: $text-color;
+      margin-top: 30px;
+
+      @media (max-width: 970px) {
+        margin-top: 0;
+      }
+
+      .my-name {
+        font-family: "DancingScript", sans-serif;
+        font-size: 8vw;
+
+        @media (min-width: 1300px) {
+          & {
+            font-size: 80px;
+          }
+        }
+      }
+
+      .prelest {
+        width: 100%;
+        font-size: 2.35vw;
+        text-align: right;
+        position: relative;
+        top: 10px;
+
+        @media (min-width: 1300px) {
+          & {
+            font-size: 24px;
+          }
+        }
       }
     }
   }

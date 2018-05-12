@@ -69,6 +69,11 @@
             <div class="designer-dark">DESIGNER</div>
             <div class="designer-light">DESIGNER</div>
         </div>
+
+        <div class="my-name-wrapper">
+            <div class="prelest">Prelest*</div>
+            <div class="my-name">Yulia Tylyk</div>
+        </div>
     </div>
 
     <div class="book"></div>

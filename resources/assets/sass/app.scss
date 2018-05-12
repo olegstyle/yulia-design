@@ -12,8 +12,15 @@
   font-weight: bold;
 }
 
+@font-face {
+  font-family: 'DancingScript';
+  src: url('../fonts/dancing-script.regular.ttf');
+  font-weight: normal;
+}
+
 // Components
 @import "components/buttons";
+@import "components/mixin";
 
 // Variables
 @import "variables";
