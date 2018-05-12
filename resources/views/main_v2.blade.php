@@ -63,6 +63,7 @@
             <li><a class="btn btn-link btn-main" href="#about_me">@lang('main.about_me')</a></li>
             <li><a class="btn btn-link" href="#contacts">@lang('main.contacts')</a></li>
         </ul>
+
         <div class="designer">
             <div class="designer-flowers"></div>
             <div class="designer-dark">DESIGNER</div>

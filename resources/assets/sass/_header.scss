@@ -1,8 +1,18 @@
+* {
+  transition: all 0.5s ease;
+}
+
 .header {
-  min-height: 900px;
-  background: url('../images/v2/header_background.png') transparent;
+  height: 900px;
+  background: url('../images_v2/header_background.png') transparent;
   position: relative;
   overflow: hidden;
+
+  @media (max-width: 970px) {
+    & {
+      height: 600px;
+    }
+  }
 
   /* MARK - CAMERA */
 
@@ -15,7 +25,7 @@
     position: absolute;
     top: 0;
     left: 0;
-    transition: all 0.5s ease;
+
   }
 
   .camera {
@@ -27,7 +37,6 @@
     position: absolute;
     top: 0;
     left: 0;
-    transition: all 0.5s ease;
 
     &:after {
       content: "";
@@ -40,7 +49,7 @@
       position: absolute;
       top: 0;
       right: -13%;
-      transition: all 0.5s ease;
+
     }
   }
 
@@ -55,7 +64,6 @@
     position: absolute;
     top: 0;
     left: 50%;
-    transition: all 0.5s ease;
 
     .computer-subwrapper {
       width: 100%;
@@ -63,7 +71,6 @@
       max-width: 840px;
       position: relative;
       left: -50%;
-      transition: all 0.5s ease;
 
       .computer {
         width: 100%;
@@ -74,7 +81,7 @@
         position: absolute;
         top: 0;
         left: 0;
-        transition: all 0.5s ease;
+
       }
 
       .usb {
@@ -86,7 +93,7 @@
         position: absolute;
         top: -5px;
         left: -5%;
-        transition: all 0.5s ease;
+
       }
 
       .paper {
@@ -98,7 +105,7 @@
         position: absolute;
         top: 0;
         right: -16%;
-        transition: all 0.5s ease;
+
       }
     }
   }
@@ -112,7 +119,7 @@
     position: absolute;
     top: 0;
     right: 1%;
-    transition: all 0.5s ease;
+
   }
 
   .flower-right {
@@ -124,7 +131,7 @@
     position: absolute;
     top: 100px;
     right: 0;
-    transition: all 0.5s ease;
+
   }
 
   .wizitka {
@@ -136,7 +143,12 @@
     position: absolute;
     top: 335px;
     right: 0;
-    transition: all 0.5s ease;
+
+    @media (max-width: 970px) {
+      & {
+        top: 235px;
+      }
+    }
   }
 
   .book {
@@ -148,30 +160,60 @@
     position: absolute;
     top: 350px;
     left: 0;
-    transition: all 0.5s ease;
+
+    @media (max-width: 970px) {
+      & {
+        top: 250px;
+      }
+    }
   }
 
   .header-content {
+    width: 60%;
     max-width: 840px;
     margin: 225px auto 0;
     position: relative;
+    text-align: center;
+
+    @media (max-width: 970px) {
+      margin-top: 150px;
+    }
 
     .web-img {
       width: 28%;
-      height: 100px;
+      height: 115px;
       max-width: 204px;
-      background: url('../images_v2/web.png') no-repeat left bottom transparent;
+      background: url('../images_v2/web.png') no-repeat left center transparent;
+      background-size: 100% auto;
       position: absolute;
       top: -40px;
       left: -5px;
-      transition: all 0.5s ease;
+
+      @media (max-width: 970px) {
+        & {
+          display: none;
+        }
+      }
     }
 
     .menu {
+      width: 100%;
       padding: 0;
       position: absolute;
       top: 0;
-      left: 20%;
+      left: 195px;
+
+      @media (max-width: 1200px) {
+        left: 24%;
+      }
+      @media (max-width: 970px) {
+        & {
+          position: relative;
+          left: 0;
+          display: inline-block;
+          width: auto;
+        }
+      }
 
       li {
         list-style: none;
@@ -180,14 +222,19 @@
         .btn {
           color: $header-text-color;
           font-weight: bold;
-          font-size: 18px;
+          font-size: 2vw;
           text-transform: uppercase;
+
+          @media (min-width: 970px) {
+            & {
+              font-size: 18px;
+            }
+          }
         }
 
         .btn-link {
-          padding-left: 30px;
-          padding-right: 30px;
-          transition: all 0.5s ease;
+          padding-left: 20px;
+          padding-right: 20px;
         }
 
         .btn-main {
@@ -197,34 +244,53 @@
     }
 
     .designer {
+      display: inline-block;
       font-family: "Open Sans", sans-serif;
-      font-size: 170px;
+      font-size: 12vw;
       font-weight: bold;
       position: relative;
-      top: 30px;
+      top: 50px;
+
+      * {
+        transition: none;
+      }
+
+      @media (max-width: 970px) {
+        & {
+          top: 0;
+        }
+      }
+      @media (min-width: 1300px) {
+        & {
+          font-size: 170px;
+        }
+      }
 
       .designer-light {
+        display: inline-block;
         color: $primary-color;
         position: absolute;
         top: 0;
         left: 0;
       }
       .designer-dark {
+        display: inline-block;
         color: $primary-dark-color;
-        position: absolute;
+        position: relative;
         top: 3px;
         left: 3px;
         text-shadow: 2px 2px 9px rgba(0, 0, 0, 0.21);
       }
 
       .designer-flowers {
-        width: 150px;
+        width: 10%;
         height: 157px;
-        background: url('../images_v2/fl_in_designer.png') no-repeat center right transparent;
+        max-width: 150px;
+        background: url('../images_v2/fl_in_designer.png') no-repeat right top transparent;
         background-size: 100% auto;
         position: absolute;
-        top: 5px;
-        right: -25px;
+        top: 40px;
+        right: -2%;
       }
     }
   }
