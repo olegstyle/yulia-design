@@ -38,10 +38,23 @@
         };
     </script>
 
-    <link href="{{ mix('build/css/app.css') }}" rel="stylesheet">
+    <link href="{{ mix('build/v2/css/app.css') }}" rel="stylesheet">
 </head>
 <body>
-    New design
-    <script src="{{ mix('build/js/app.js') }}"></script>
+
+<header class="header">
+    <div class="camera-flower"></div>
+    <div class="camera"></div>
+    <div class="computer-wrapper">
+        <div class="computer-subwrapper">
+            <div class="usb"></div>
+            <div class="paper"></div>
+            <div class="computer"></div>
+        </div>
+    </div>
+    <div class="phone"></div>
+</header>
+
+<script src="{{ mix('build/v2/js/app.js') }}"></script>
 </body>
 </html>

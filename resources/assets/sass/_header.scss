@@ -1,0 +1,92 @@
+.header {
+  min-height: 900px;
+  background: url('../images/v2/header_background.png') transparent;
+  position: relative;
+  overflow: hidden;
+
+  /* MARK - CAMERA */
+
+  .camera-flower {
+    width: 150px;
+    height: 300px;
+    background: url("../images/v2/fl_header_left_cam.png") no-repeat left top transparent;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  .camera {
+    width: 225px;
+    height: 160px;
+    background: url("../images/v2/header_cam.png") no-repeat center transparent;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    &:after {
+      content: "";
+      display: block;
+      width: 37px;
+      height: 50px;
+      background: url("../images/v2/fl_header_left_cam_2.png") no-repeat left top transparent;
+      position: absolute;
+      top: 0;
+      right: -35px;
+    }
+  }
+
+  /* MARK - COMPUTER */
+
+  .computer-wrapper {
+    $computer_img_width: 840px;
+    $computer_img_height: 133px;
+    width: $computer_img_width;
+    height: $computer_img_height;
+    position: absolute;
+    top: 0;
+    left: 50%;
+
+    .computer-subwrapper {
+      width: $computer_img_width;
+      height: $computer_img_height;
+      position: relative;
+      left: -50%;
+
+      .computer {
+        width: $computer_img_width;
+        height: $computer_img_height;
+        background: url('../images/v2/komp.png') no-repeat center transparent;
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+
+      .usb {
+        width: 230px;
+        height: 170px;
+        background: url('../images/v2/usb.png') no-repeat top right transparent;
+        position: absolute;
+        top: -5px;
+        left: -45px;
+      }
+
+      .paper {
+        width: 362px;
+        height: 312px;
+        background: url('../images/v2/papers.png') no-repeat left top transparent;
+        position: absolute;
+        top: 0;
+        right: -160px;
+      }
+    }
+  }
+
+  .phone {
+    width: 115px;
+    height: 175px;
+    background: url('../images/v2/header_phone.png') no-repeat right top transparent;
+    position: absolute;
+    top: 0;
+    right: 10px;
+  }
+}
