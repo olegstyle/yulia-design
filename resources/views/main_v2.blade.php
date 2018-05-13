@@ -147,6 +147,30 @@
     </div>
 </section>
 
+<section id="projects" class="projects-wrapper">
+    <div class="flower-top"></div>
+    <div class="flower-bot"></div>
+    <h3 class="title-with-lines"><span>@lang('main.portfolio')</span></h3>
+    <div class="container">
+        <div class="row projects">
+            @foreach($projects as $p)
+                <div class="col-sm-4 col-md-3">
+                    <a data-fancybox="gallery"
+                       href="{{ $p['image_url'] }}"
+                       style="display: block">
+                        <div class="project">
+                            <div class="project-image-wrapper">
+                                <div class="project-image" style="background-image: url({{ $p['image_url'] }});"></div>
+                            </div>
+                            <h4 class="project-name">{{ $p['name'] }}</h4>
+                        </div>
+                    </a>
+                </div>
+            @endforeach
+        </div>
+    </div>
+</section>
+
 <script src="{{ mix('build/v2/js/app.js') }}"></script>
 </body>
 </html>

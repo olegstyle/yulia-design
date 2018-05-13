@@ -1,0 +1,92 @@
+.projects-wrapper {
+  position: relative;
+
+  a:hover {
+    text-decoration: none;
+  }
+  .project {
+    position: relative;
+    padding-bottom: 40px;
+
+    .project-image-wrapper {
+      background-color: #ebebeb;
+      overflow: hidden;
+
+      -webkit-box-shadow: 6px 6px 13px 0 rgba(0, 0, 0, 0.21);
+      -moz-box-shadow: 6px 6px 13px 0 rgba(0, 0, 0, 0.21);
+      box-shadow: 6px 6px 13px 0 rgba(0, 0, 0, 0.21);
+
+      .project-image {
+        padding-top: 100%;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+      }
+    }
+
+    &:hover .project-image-wrapper {
+      -webkit-box-shadow: 8px 8px 13px 0 rgba(0, 0, 0, 0.35);
+      -moz-box-shadow: 8px 8px 13px 0 rgba(0, 0, 0, 0.35);
+      box-shadow: 8px 8px 13px 0 rgba(0, 0, 0, 0.35);
+
+      .project-image {
+        transform: scale(1.25);
+      }
+    }
+
+    .project-name {
+      font-size: 18px;
+      color: #5b5b5b;
+      font-weight: bold;
+      text-align: left;
+      text-transform: uppercase;
+      padding-top: 15px;
+
+      text-overflow: ellipsis;
+      overflow: hidden;
+      white-space: nowrap;
+    }
+
+    &:hover .project-name {
+      color: $text-color;
+    }
+
+    &:after {
+      content: "";
+      display: block;
+      width: 33%;
+      height: 1px;
+      background-color: $primary-color;
+      position: absolute;
+      bottom: 30px;
+      left: 0;
+    }
+
+    &:hover:after {
+      height: 2px;
+      background-color: $primary-dark-color;
+    }
+  }
+
+  .flower-top {
+    width: 14%;
+    max-width: 194px;
+    height: 350px;
+    background: url('../images_v2/fl-projects-top.png') no-repeat left top transparent;
+    background-size: 100% auto;
+    position: absolute;
+    top: -20px;
+    left: 0;
+  }
+
+  .flower-bot {
+    width: 24%;
+    max-width: 339px;
+    height: 187px;
+    background: url('../images_v2/fl-projects-bot.png') no-repeat right bottom transparent;
+    background-size: 100% auto;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
+}

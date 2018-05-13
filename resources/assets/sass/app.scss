@@ -36,7 +36,7 @@ body {
   background: #fff;
 }
 
-* {
+*, *:after, *:before {
   transition: all 0.5s ease;
 }
 
@@ -86,3 +86,4 @@ body {
 @import "header";
 @import "about_me";
 @import "skills";
+@import "projects";
