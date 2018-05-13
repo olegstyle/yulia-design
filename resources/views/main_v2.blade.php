@@ -38,6 +38,7 @@
         };
     </script>
 
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
     <link href="{{ mix('build/v2/css/app.css') }}" rel="stylesheet">
 </head>
 <body>
@@ -55,6 +56,9 @@
     <div class="phone"></div>
     <div class="flower-right"></div>
     <div class="wizitka"></div>
+
+    <div class="mouse"></div>
+    <div class="pin"></div>
 
     <div class="header-content">
         <div class="web-img"></div>
@@ -84,9 +88,28 @@
         <div class="portfolio-dates">
             2017 - {{ date('Y') }}
         </div>
+
+        <hr class="separate" />
+
+        <div class="social">
+            <a href="skype:{{ $skype }}">
+                <i class="fab fa-skype"></i>
+                <span>{{ $skype }}</span>
+            </a>
+            <a href="tel:{{ $phone }}">
+                <i class="fab fa-whatsapp"></i>
+                <span>{{ $phone }}</span>
+            </a>
+            <a href="mailto:{{ $email }}">
+                <i class="fas fa-envelope"></i>
+                <span>{{ $email }}</span>
+            </a>
+        </div>
     </div>
 
     <div class="book"></div>
+
+    <a href="#about_me" class="go-to-about-me"></a>
 </header>
 
 <script src="{{ mix('build/v2/js/app.js') }}"></script>

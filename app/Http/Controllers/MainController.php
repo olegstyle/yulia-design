@@ -146,6 +146,7 @@ class MainController extends Controller
         $data['about_me_short'] = setting('site.about_me_short_' . $locale);
         $data['email'] = setting('site.email');
         $data['skype'] = setting('site.skype');
+        $data['phone'] = setting('site.phone');
         $data['locale'] = $locale;
         $data['seo_title'] = setting('site.seo_title');
         $data['seo_keywords'] = setting('site.seo_keywords');

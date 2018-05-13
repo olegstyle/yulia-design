@@ -3,16 +3,9 @@
 }
 
 .header {
-  height: 900px;
   background: url('../images_v2/header_background.png') transparent;
   position: relative;
   overflow: hidden;
-
-  @media (max-width: 970px) {
-    & {
-      height: 600px;
-    }
-  }
 
   /* MARK - CAMERA */
 
@@ -355,6 +348,125 @@
           font-size: 18px;
         }
       }
+    }
+
+    .separate {
+      margin: 40px 10%;
+      background-color: #d7d7d7;
+    }
+  }
+
+  .mouse {
+    width: 7%;
+    height: 134px;
+    max-width: 96px;
+    background: url('../images_v2/mouse.png') no-repeat left top transparent;
+    background-size: 100% auto;
+    position: absolute;
+    top: 75%;
+    left: 75%;
+
+    @media (max-width: 970px) {
+      top: 60%;
+    }
+  }
+
+  .pin {
+    width: 5.5%;
+    height: 68px;
+    max-width: 80px;
+    background: url('../images_v2/pin.png') no-repeat left top transparent;
+    background-size: 100% auto;
+    position: absolute;
+    top: 55%;
+    left: 25%;
+
+    @media (max-width: 970px) {
+      top: 45%;
+    }
+  }
+
+  .social {
+    display: inline-block;
+    /*font-size: 2vw;
+    @media (min-width: 1300px) {
+      & {
+        font-size: 18px;
+      }
+    }*/
+    font-size: 16px;
+    margin-bottom: 80px;
+
+    i {
+      font-size: 150%;
+      opacity: 0.65;
+      position: absolute;
+      top: 20%;
+      left: 0;
+    }
+
+    a {
+      display: block;
+      float: left;
+      padding: 10px 0;
+      margin-right: 25px;
+      color: $text-color;
+      position: relative;
+
+      &:hover {
+        text-decoration: none;
+
+        span {
+          text-decoration: underline;
+        }
+
+        i {
+          opacity: 1;
+        }
+      }
+
+      @media (max-width: 875px) {
+        padding: 30px 20px;
+        margin-right: 0;
+
+        i {
+          position: static;
+          font-size: 200%;
+        }
+
+        span {
+          display: none;
+        }
+      }
+    }
+
+    span {
+      padding-left: 30px;
+    }
+    .fa-skype {
+      color: #0cb3f0;
+    }
+    .fa-whatsapp {
+      color: #51c65d;
+    }
+    .fa-envelope {
+      color: #e64134;
+    }
+  }
+
+  .go-to-about-me {
+    display: block;
+    width: 28px;
+    height: 28px;
+    background: url('../images_v2/to_down.png') no-repeat center transparent;
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    margin-left: -14px;
+    opacity: 0.6;
+
+    &:hover {
+      opacity: 1;
     }
   }
 }
