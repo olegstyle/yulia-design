@@ -10,7 +10,7 @@
 | to using a Closure or controller method. Build something great!
 |
 */
-Route::get('/', "MainController@index");
+Route::get('/', "MainController@indexV2");
 Route::get('/v1', "MainController@index");
 Route::get('/v2', "MainController@indexV2");
 Route::group(['prefix' => 'angi'] , function() {
