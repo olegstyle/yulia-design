@@ -1,11 +1,11 @@
-* {
-  transition: all 0.5s ease;
-}
-
 .header {
   background: url('../images_v2/header_background.png') transparent;
   position: relative;
   overflow: hidden;
+
+  -webkit-box-shadow: 0 6px 13px 0 rgba(0, 0, 0, 0.21);
+  -moz-box-shadow: 0 6px 13px 0 rgba(0, 0, 0, 0.21);
+  box-shadow: 0 6px 13px 0 rgba(0, 0, 0, 0.21);
 
   /* MARK - CAMERA */
 

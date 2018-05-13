@@ -36,4 +36,53 @@ body {
   background: #fff;
 }
 
+* {
+  transition: all 0.5s ease;
+}
+
+.title-with-lines {
+  font-size: 24px;
+  text-align: center;
+  padding: 55px 0;
+
+  @media (min-width: 768px) {
+    & {
+      font-size: 32px;
+    }
+  }
+
+  @media (min-width: 992px) {
+    & {
+      font-size: 40px;
+    }
+  }
+
+  @media (min-width: 1200px) {
+    & {
+      font-size: 48px;
+    }
+  }
+
+  span {
+    @include text_with_lines;
+    color: $title-text-color;
+
+    &:before, &:after {
+      border: 1px solid $title-text-color;
+      width: 20%;
+    }
+
+    &:before {
+      left: auto;
+      right: 120%;
+    }
+    &:after {
+      right: auto;
+      left: 120%;
+    }
+  }
+}
+
 @import "header";
+@import "about_me";
+

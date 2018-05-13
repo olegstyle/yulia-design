@@ -1,0 +1,86 @@
+.about-me {
+  position: relative;
+
+  .photo-wrapper {
+    display: inline-block;
+    max-width: 500px;
+    position: relative;
+
+    &, .photo, .photo-border {
+      width: 100%;
+      padding-top: 100%;
+    }
+
+    .photo {
+      background: url("../images_v2/me.png") no-repeat center transparent;
+      background-size: 95% auto;
+      z-index: 2;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+
+    .photo-border {
+      background: rgba(241,104,148,1);
+      background: -moz-linear-gradient(top, rgba(241,104,148,1) 0%, rgba(138,133,245,1) 100%);
+      background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(241,104,148,1)), color-stop(100%, rgba(138,133,245,1)));
+      background: -webkit-linear-gradient(top, rgba(241,104,148,1) 0%, rgba(138,133,245,1) 100%);
+      background: -o-linear-gradient(top, rgba(241,104,148,1) 0%, rgba(138,133,245,1) 100%);
+      background: -ms-linear-gradient(top, rgba(241,104,148,1) 0%, rgba(138,133,245,1) 100%);
+      background: linear-gradient(to bottom, rgba(241,104,148,1) 0%, rgba(138,133,245,1) 100%);
+      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f16894', endColorstr='#8a85f5', GradientType=0);
+      z-index: 1;
+      border-radius: 50%;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+
+    @media (max-width: 767px) {
+      & {
+        margin-bottom: 35px;
+      }
+
+      &, .photo, .photo-border {
+        width: 280px;
+        height: 280px;
+        padding-top: 0;
+      }
+    }
+  }
+
+  .info {
+    padding: 30px 50px;
+    background-color: #f5f5f5;
+
+    -webkit-box-shadow: 6px 6px 13px 0 rgba(0, 0, 0, 0.21);
+    -moz-box-shadow: 6px 6px 13px 0 rgba(0, 0, 0, 0.21);
+    box-shadow: 6px 6px 13px 0 rgba(0, 0, 0, 0.21);
+
+    @media (max-width: 767px) {
+      padding: 15px;
+    }
+  }
+
+  .flower-top {
+    width: 19%;
+    height: 80px;
+    max-width: 290px;
+    background: url('../images_v2/fl-about-me-top.png') no-repeat left top transparent;
+    background-size: 100% auto;
+    position: absolute;
+    top: -20px;
+    left: 0;
+  }
+
+  .flower-bot {
+    width: 21%;
+    height: 101px;
+    max-width: 290px;
+    background: url('../images_v2/fl-about-me-bot.png') no-repeat right bottom transparent;
+    background-size: 100% auto;
+    position: absolute;
+    bottom: -3px;
+    right: 0;
+  }
+}

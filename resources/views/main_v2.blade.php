@@ -112,6 +112,29 @@
     <a href="#about_me" class="go-to-about-me"></a>
 </header>
 
+<section id="about_me" class="about-me">
+    <div class="flower-top"></div>
+    <div class="flower-bot"></div>
+
+    <h3 class="title-with-lines"><span>@lang('main.about_me')</span></h3>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6 text-center">
+                <div class="photo-wrapper">
+                    <div class="photo-border"></div>
+                    <div class="photo"></div>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="info">
+                    <p>{!! $about_me_short !!}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
 <script src="{{ mix('build/v2/js/app.js') }}"></script>
 </body>
 </html>
