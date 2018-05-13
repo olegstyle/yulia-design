@@ -135,6 +135,18 @@
     </div>
 </section>
 
+<section id="skills" class="skills-wrapper">
+    <div class="gradient"></div>
+    <h3 class="title-with-lines"><span>@lang('main.my_skills')</span></h3>
+    <div class="container skills">
+        <div class="row">
+            <div class="col-sm-4 skill"><div class="ps"></div></div>
+            <div class="col-sm-4 skill"><div class="ai"></div></div>
+            <div class="col-sm-4 skill"><div class="id"></div></div>
+        </div>
+    </div>
+</section>
+
 <script src="{{ mix('build/v2/js/app.js') }}"></script>
 </body>
 </html>

@@ -1,0 +1,58 @@
+.skills-wrapper {
+  background: url('../images_v2/skills/background.jpg') no-repeat center transparent;
+  background-size: 100% auto;
+  overflow: hidden;
+  position: relative;
+
+  .gradient {
+    width: 100%;
+    padding-top: 100%;
+    background: rgba(138,133,245,1);
+    background: -moz-linear-gradient(left, rgba(138,133,245,1) 0%, rgba(191,133,198,1) 100%);
+    background: -webkit-gradient(left top, right top, color-stop(0%, rgba(138,133,245,1)), color-stop(100%, rgba(191,133,198,1)));
+    background: -webkit-linear-gradient(left, rgba(138,133,245,1) 0%, rgba(191,133,198,1) 100%);
+    background: -o-linear-gradient(left, rgba(138,133,245,1) 0%, rgba(191,133,198,1) 100%);
+    background: -ms-linear-gradient(left, rgba(138,133,245,1) 0%, rgba(191,133,198,1) 100%);
+    background: linear-gradient(to right, rgba(138,133,245,1) 0%, rgba(191,133,198,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#8a85f5', endColorstr='#bf85c6', GradientType=1 );
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0.84;
+  }
+
+  .title-with-lines {
+    color: #fff;
+    padding-bottom: 0;
+
+    span {
+      color: #fff;
+
+      &:before, &:after {
+        display: none;
+      }
+    }
+  }
+
+  .skills {
+    .skill {
+      text-align: center;
+
+      * {
+        width: 100%;
+        max-width: 215px;
+        padding-top: 100%;
+        display: inline-block;
+        background: url('../images_v2/skills/ps.png') no-repeat center transparent;
+        background-size: 100% auto;
+      }
+      .ai {
+        background-image: url('../images_v2/skills/ai.png');
+      }
+      .id {
+        background-image: url('../images_v2/skills/id.png');
+      }
+    }
+  }
+}
