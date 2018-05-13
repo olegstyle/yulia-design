@@ -466,4 +466,87 @@
       opacity: 1;
     }
   }
+
+  .paper-xs {
+    display: none;
+  }
+
+  @media (max-width: 767px) {
+    .computer-wrapper, .camera, .phone, .book, .mouse, .pin, .go-to-about-me {
+      display: none;
+    }
+    .header-content {
+      width: auto;
+      margin-top: 70px;
+
+      .menu li .btn-link {
+        padding-left: 10px;
+        padding-right: 10px;
+        font-size: 4vw;
+      }
+      .designer {
+        font-size: 17vw;
+
+        .designer-flowers {
+          min-width: 40px;
+          top: 15px;
+        }
+      }
+      .my-name-wrapper {
+        .prelest {
+          font-size: 4.35vw;
+        }
+        .my-name {
+          font-size: 13vw;
+        }
+      }
+      .its-my-portfolio {
+        font-size: 7.35vw;
+        letter-spacing: normal;
+        padding-left: 0;
+        &:before {
+          left: -30px;
+        }
+        &:after {
+          right: -30px;
+        }
+      }
+      .portfolio-dates {
+        font-size: 4vw;
+      }
+
+      .separate {
+        margin: 26px 20% 10px;
+      }
+    }
+
+    .camera-flower {
+      min-width: 100px;
+    }
+    .paper-xs {
+      display: block;
+      width: 150px;
+      height: 256px;
+      background: url('../images_v2/papers.png') no-repeat right top transparent;
+      background-size: 100% auto;
+      position: absolute;
+      top: 170px;
+      left: 20px;
+      transform: rotate(-90deg);
+    }
+    .wizitka {
+      top: 235px;
+      width: 150px;
+      left: calc(100% - 65px);
+    }
+
+    .social {
+      margin-bottom: 30px;
+
+      a {
+        padding-top: 10px;
+        padding-bottom: 10px;
+      }
+    }
+  }
 }

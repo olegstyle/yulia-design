@@ -46,6 +46,7 @@
 <header class="header">
     <div class="camera-flower"></div>
     <div class="camera"></div>
+    <div class="paper-xs"></div>
     <div class="computer-wrapper">
         <div class="computer-subwrapper">
             <div class="usb"></div>
@@ -73,6 +74,8 @@
             <div class="designer-dark">DESIGNER</div>
             <div class="designer-light">DESIGNER</div>
         </div>
+
+        <div class="clearfix"></div>
 
         <div class="my-name-wrapper">
             <div class="prelest">Prelest*</div>
