@@ -66,7 +66,7 @@
         <ul class="menu">
             <li><a class="btn btn-link" href="#portfolio">@lang('main.portfolio')</a></li>
             <li><a class="btn btn-link btn-main" href="#about_me">@lang('main.about_me')</a></li>
-            <li><a class="btn btn-link" href="#contacts">@lang('main.contacts')</a></li>
+            <li><a class="btn btn-link" href="#contact-me">@lang('main.contacts')</a></li>
         </ul>
 
         <div class="designer">
@@ -187,7 +187,7 @@
     <div class="copyright"><span>Tylyk Yulia. All rights reserved © 2017 - {{ date('Y') }}</span></div>
 
     <div class="container">
-        <form class="contact-form form-horizontal" method="POST" action="{{ url('/angi/contact/send') }}">
+        <form id="contact-me" class="contact-form form-horizontal" method="POST" action="{{ url('/angi/contact/send') }}">
             <h3 class="title-with-lines"><span>@lang('main.contacts')</span></h3>
 
             <div class="form-group drop-margin-xs">

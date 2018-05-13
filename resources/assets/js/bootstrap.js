@@ -13,12 +13,17 @@ require('@fancyapps/fancybox');
 window.AOS = require('aos');
 window.toastr = require('toastr');
 
-window.toastr.options = {
+$.ajaxSetup({
+    headers: {
+        'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+    }
+});
+toastr.options = {
     "closeButton": true,
     "debug": false,
     "newestOnTop": false,
     "progressBar": false,
-    "positionClass": "toast-top-right",
+    "positionClass": "toast-top-full-width",
     "preventDuplicates": false,
     "onclick": null,
     "showDuration": "300",
