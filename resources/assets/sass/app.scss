@@ -34,6 +34,7 @@
 body {
   font-family: "Gothic", sans-serif;
   background: #fff;
+  min-width: 320px;
 }
 
 *, *:after, *:before {
@@ -43,7 +44,7 @@ body {
 .title-with-lines {
   font-size: 24px;
   text-align: center;
-  padding: 55px 0;
+  padding: 25px 0;
 
   @media (min-width: 768px) {
     & {
@@ -54,12 +55,14 @@ body {
   @media (min-width: 992px) {
     & {
       font-size: 40px;
+      padding: 35px 0;
     }
   }
 
   @media (min-width: 1200px) {
     & {
       font-size: 48px;
+      padding: 55px 0;
     }
   }
 

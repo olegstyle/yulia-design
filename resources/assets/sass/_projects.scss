@@ -70,6 +70,7 @@
 
   .flower-top {
     width: 14%;
+    min-width: 65px;
     max-width: 194px;
     height: 350px;
     background: url('../images_v2/fl-projects-top.png') no-repeat left top transparent;
@@ -81,6 +82,7 @@
 
   .flower-bot {
     width: 24%;
+    min-width: 125px;
     max-width: 339px;
     height: 187px;
     background: url('../images_v2/fl-projects-bot.png') no-repeat right bottom transparent;

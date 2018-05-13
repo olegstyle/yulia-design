@@ -1,5 +1,6 @@
 .about-me {
   position: relative;
+  padding-bottom: 30px;
 
   .photo-wrapper {
     display: inline-block;
@@ -59,12 +60,14 @@
 
     @media (max-width: 767px) {
       padding: 15px;
+      margin-bottom: 25px;
     }
   }
 
   .flower-top {
     width: 19%;
     height: 80px;
+    min-width: 150px;
     max-width: 290px;
     background: url('../images_v2/fl-about-me-top.png') no-repeat left top transparent;
     background-size: 100% auto;
@@ -76,6 +79,7 @@
   .flower-bot {
     width: 21%;
     height: 101px;
+    min-width: 150px;
     max-width: 290px;
     background: url('../images_v2/fl-about-me-bot.png') no-repeat right bottom transparent;
     background-size: 100% auto;

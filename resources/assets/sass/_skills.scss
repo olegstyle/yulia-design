@@ -1,6 +1,6 @@
 .skills-wrapper {
   background: url('../images_v2/skills/background.jpg') no-repeat center transparent;
-  background-size: 100% auto;
+  background-size: cover;
   overflow: hidden;
   position: relative;
 
@@ -24,6 +24,10 @@
     top: 0;
     left: 0;
     opacity: 0.84;
+
+    @media (max-width: 767px) {
+      height: 500px;
+    }
   }
 
   .title-with-lines {
@@ -50,13 +54,44 @@
         display: inline-block;
         background: url('../images_v2/skills/ps.png') no-repeat center transparent;
         background-size: 100% auto;
+
+        @media (max-width: 991px) {
+          width: 150px;
+          height: 150px;
+          padding-top: 0;
+          margin-top: 40px;
+          margin-bottom: 40px;
+        }
+
+        @media (max-width: 767px) {
+          & {
+            width: 100px;
+            height: 100px;
+            margin-top: 0;
+            margin-bottom: 0;
+          }
+        }
       }
+
+      @media (max-width: 767px) {
+        &:first-of-type {
+          margin-top: 25px;
+        }
+        &:last-of-type {
+          margin-bottom: 25px;
+        }
+      }
+
       .ai {
         background-image: url('../images_v2/skills/ai.png');
       }
       .id {
         background-image: url('../images_v2/skills/id.png');
       }
+    }
+
+    @media (max-width: 767px) {
+      padding-bottom: 25px;
     }
   }
 }

@@ -140,9 +140,9 @@
     <h3 class="title-with-lines"><span>@lang('main.my_skills')</span></h3>
     <div class="container skills">
         <div class="row">
-            <div class="col-sm-4 skill"><div class="ps"></div></div>
-            <div class="col-sm-4 skill"><div class="ai"></div></div>
-            <div class="col-sm-4 skill"><div class="id"></div></div>
+            <div class="col-xs-12 col-sm-4 skill"><div class="ps"></div></div>
+            <div class="col-xs-6 col-sm-4 skill"><div class="ai"></div></div>
+            <div class="col-xs-6 col-sm-4 skill"><div class="id"></div></div>
         </div>
     </div>
 </section>
@@ -154,7 +154,7 @@
     <div class="container">
         <div class="row projects">
             @foreach($projects as $p)
-                <div class="col-sm-4 col-md-3">
+                <div class="col-sm-4 col-md-3 col-xs-6">
                     <a data-fancybox="gallery"
                        href="{{ $p['image_url'] }}"
                        style="display: block">
