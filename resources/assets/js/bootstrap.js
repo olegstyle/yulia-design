@@ -12,6 +12,10 @@ require('bootstrap-sass');
 require('@fancyapps/fancybox');
 window.AOS = require('aos');
 window.toastr = require('toastr');
+$(document).ready(function () {
+    window.AOS.init();
+    console.log('window.AOS.init');
+});
 
 $.ajaxSetup({
     headers: {

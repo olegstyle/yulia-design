@@ -95,15 +95,15 @@
         <hr class="separate" />
 
         <div class="social">
-            <a href="skype:{{ $skype }}">
+            <a href="skype:{{ $skype }}" class="aos-init aos-animate" data-aos="fade-up" data-aos-duration="1000">
                 <i class="fab fa-skype"></i>
                 <span>{{ $skype }}</span>
             </a>
-            <a href="tel:{{ $phone }}">
+            <a href="tel:{{ $phone }}" class="aos-init aos-animate" data-aos="fade-up" data-aos-duration="1500">
                 <i class="fab fa-whatsapp"></i>
                 <span>{{ $phone }}</span>
             </a>
-            <a href="mailto:{{ $email }}">
+            <a href="mailto:{{ $email }}" class="aos-init aos-animate" data-aos="fade-up" data-aos-duration="2000">
                 <i class="fas fa-envelope"></i>
                 <span>{{ $email }}</span>
             </a>
@@ -112,25 +112,27 @@
 
     <div class="book"></div>
 
-    <a href="#about_me" class="go-to-about-me"></a>
+    <a href="#about_me" class="go-to-about-me aos-init aos-animate" data-aos="fade-up" data-aos-duration="2500"></a>
 </header>
 
 <section id="about_me" class="about-me">
     <div class="flower-top"></div>
     <div class="flower-bot"></div>
 
-    <h3 class="title-with-lines"><span>@lang('main.about_me')</span></h3>
+    <h3 class="title-with-lines aos-init aos-animate" data-aos="fade-left" data-aos-duration="1000">
+        <span>@lang('main.about_me')</span>
+    </h3>
 
     <div class="container">
         <div class="row">
             <div class="col-sm-6 text-center">
-                <div class="photo-wrapper">
+                <div class="photo-wrapper aos-init aos-animate" data-aos="zoom-down" data-aos-duration="1000">
                     <div class="photo-border"></div>
                     <div class="photo"></div>
                 </div>
             </div>
             <div class="col-sm-6">
-                <div class="info">
+                <div class="info aos-init aos-animate" data-aos="zoom-right" data-aos-duration="1500">
                     <p>{!! $about_me_short !!}</p>
                 </div>
             </div>
@@ -140,12 +142,12 @@
 
 <section id="skills" class="skills-wrapper">
     <div class="gradient"></div>
-    <h3 class="title-with-lines"><span>@lang('main.my_skills')</span></h3>
+    <h3 class="title-with-lines aos-init aos-animate" data-aos="fade-left" data-aos-duration="1000"><span>@lang('main.my_skills')</span></h3>
     <div class="container skills">
         <div class="row">
-            <div class="col-xs-12 col-sm-4 skill"><div class="ps"></div></div>
-            <div class="col-xs-6 col-sm-4 skill"><div class="ai"></div></div>
-            <div class="col-xs-6 col-sm-4 skill"><div class="id"></div></div>
+            <div class="col-xs-12 col-sm-4 skill aos-init aos-animate" data-aos="fade-left" data-aos-duration="1000"><div class="ps"></div></div>
+            <div class="col-xs-6 col-sm-4 skill aos-init aos-animate" data-aos="fade-down" data-aos-duration="2000"><div class="ai"></div></div>
+            <div class="col-xs-6 col-sm-4 skill aos-init aos-animate" data-aos="fade-right" data-aos-duration="3000"><div class="id"></div></div>
         </div>
     </div>
 </section>
@@ -153,14 +155,17 @@
 <section id="portfolio" class="projects-wrapper">
     <div class="flower-top"></div>
     <div class="flower-bot"></div>
-    <h3 class="title-with-lines"><span>@lang('main.portfolio')</span></h3>
+    <h3 class="title-with-lines aos-init aos-animate" data-aos="fade-left" data-aos-duration="1000"><span>@lang('main.portfolio')</span></h3>
     <div class="container">
         <div class="row projects">
             @foreach($projects as $p)
                 <div class="col-sm-4 col-md-3 col-xs-6">
                     <a data-fancybox="gallery"
                        href="{{ $p['image_url'] }}"
-                       style="display: block">
+                       style="display: block"
+                       data-aos="flip-left"
+                       data-aos-duration="900"
+                       class="aos-init aos-animate">
                         <div class="project">
                             <div class="project-image-wrapper">
                                 <div class="project-image" style="background-image: url({{ $p['image_url'] }});"></div>
@@ -188,7 +193,7 @@
 
     <div class="container">
         <form id="contact-me" class="contact-form form-horizontal" method="POST" action="{{ url('/angi/contact/send') }}">
-            <h3 class="title-with-lines"><span>@lang('main.contacts')</span></h3>
+            <h3 class="title-with-lines aos-init aos-animate" data-aos="fade-left" data-aos-duration="1000"><span>@lang('main.contacts')</span></h3>
 
             <div class="form-group drop-margin-xs">
                 <div class="col-xs-12 col-sm-6 col-md-5 margin-bottom-xs--15">
