@@ -147,7 +147,7 @@
     </div>
 </section>
 
-<section id="projects" class="projects-wrapper">
+<section id="portfolio" class="projects-wrapper">
     <div class="flower-top"></div>
     <div class="flower-bot"></div>
     <h3 class="title-with-lines"><span>@lang('main.portfolio')</span></h3>
@@ -168,6 +168,49 @@
                 </div>
             @endforeach
         </div>
+    </div>
+</section>
+
+<section id="contacts" class="contacts-wrapper">
+    <div class="flower-top"></div>
+    <div class="flower-bot-left"></div>
+    <div class="flower-bot-right"></div>
+    <div class="book"></div>
+    <div class="wizitka"></div>
+    <div class="phone"></div>
+    <div class="paper"></div>
+    <div class="pin"></div>
+    <div class="mouse"></div>
+    <div class="copyright"><span>Tylyk Yulia. All rights reserved © 2017 - {{ date('Y') }}</span></div>
+
+    <div class="container">
+        <form class="contact-form form-horizontal" method="POST" action="{{ url('/angi/contact/send') }}">
+            <h3 class="title-with-lines"><span>@lang('main.contacts')</span></h3>
+
+            <div class="form-group drop-margin-xs">
+                <div class="col-xs-12 col-sm-6 col-md-5 margin-bottom-xs--15">
+                    <input id="contact-name" name="name" class="form-control" placeholder="@lang('voyager.generic.name')">
+                </div>
+                <div class="hidden-xs hidden-sm col-md-2">&nbsp;</div>
+                <div class="col-xs-12 col-sm-6 col-md-5">
+                    <input id="contact-email" name="email" type="email" class="form-control" placeholder="@lang('voyager.generic.email')">
+                </div>
+            </div>
+            <div class="form-group drop-margin-xs">
+                <div class="col-xs-12">
+                    <textarea id="contact-message" name="message" class="form-control" rows="3" placeholder="@lang('main.message')"></textarea>
+                </div>
+            </div>
+
+            <div class="form-group drop-margin-xs">
+                <div class="col-xs-12">
+                    {!! Recaptcha::render() !!}
+                </div>
+            </div>
+            <div class="text-center">
+                <button class="btn btn-link btn-main" type="submit">@lang('main.send')</button>
+            </div>
+        </form>
     </div>
 </section>
 

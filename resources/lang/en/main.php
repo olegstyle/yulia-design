@@ -28,5 +28,7 @@ return [
     'email_invalid' => 'Email\'s invalid',
     'message_empty' => 'Didn\'t set message',
     'send_success' => 'Send success',
-    'start_sending' => 'Sending...'
+    'start_sending' => 'Sending...',
+    'message' => 'Message',
+    'send' => 'Send',
 ];

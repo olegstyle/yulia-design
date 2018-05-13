@@ -28,5 +28,7 @@ return [
     'email_invalid' => 'Email не корректный',
     'message_empty' => 'Не указано сообщение',
     'send_success' => 'Успешно отправлено',
-    'start_sending' => 'Отправка...'
+    'start_sending' => 'Отправка...',
+    'message' => 'Сообщение',
+    'send' => 'Отправить',
 ];
