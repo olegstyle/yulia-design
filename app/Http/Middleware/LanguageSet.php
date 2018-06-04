@@ -23,7 +23,7 @@ class Language
      */
     public function handle($request, Closure $next)
     {
-        $supportedLanguages = config('app.supported_locales');
+        $supportedLanguages = config('app.locales');
         $lang = $request->cookie('lang');
         if ($lang !== null) {
             if (in_array($lang, $supportedLanguages)) {

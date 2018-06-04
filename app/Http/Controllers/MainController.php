@@ -9,6 +9,8 @@ use App\ProjectTechnicalStack;
 use App\TechnicalStack;
 use App\TechnicalStackGroup;
 use Illuminate\Http\JsonResponse;
+use Illuminate\Http\RedirectResponse;
+use Illuminate\Support\Facades\Cookie;
 use Illuminate\Support\Facades\Lang;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\View\View;
@@ -34,7 +36,7 @@ class MainController extends Controller
     public function changeLang(string $lang): RedirectResponse
     {
         $lang = strtolower($lang);
-        if (in_array($lang, config('app.supported_locales'))) {
+        if (in_array($lang, config('app.locales'))) {
             return redirect()->back()->withCookie(Cookie::forever('lang', $lang));
         }
 
