@@ -3,15 +3,16 @@
 namespace App\Http\Middleware;
 
 use Closure;
+use Illuminate\Support\Facades\Cookie;
 use Illuminate\Support\Facades\Lang;
 
 /**
- * Class LanguageSet
+ * Class Language
  * @package App\Http\Middleware
  *
- * @author Oleh Borysenko <oleg.borisenko@morefromit.com>
+ * @author Oleh Borysenko <olegstyle1@gmail.com>
  */
-class LanguageSet
+class Language
 {
     /**
      * Handle an incoming request.
@@ -22,22 +23,37 @@ class LanguageSet
      */
     public function handle($request, Closure $next)
     {
-        /*$locale = strtolower(!empty($_COOKIE['lang']) ? $_COOKIE['lang'] : '');
-        if ($locale != 'ru' && $locale != 'en') {
-            if (!empty($_SERVER['HTTP_ACCEPT_LANGUAGE'])) {
-                $locale = (substr($_SERVER['HTTP_ACCEPT_LANGUAGE'], 0, 2));
-                if ($locale == 'ua' || $locale == 'ru') {
-                    $locale = 'ru';
-                } else {
-                    $locale = 'en';
-                }
-            } else {
-                $locale = 'en';
+        $supportedLanguages = config('app.supported_locales');
+        $lang = $request->cookie('lang');
+        if ($lang !== null) {
+            if (in_array($lang, $supportedLanguages)) {
+                $this->setLocale($lang);
+
+                return $next($request);
+            }
+
+            // forget incorrect lang
+            Cookie::forget('lang');
+        }
+
+        $acceptLanguages = explode(',', $request->server('HTTP_ACCEPT_LANGUAGE', config('app.locale')));
+        foreach ($acceptLanguages as $lang) {
+            $lang = strtolower(substr(trim($lang), 0, 2));
+            if (in_array($lang, $supportedLanguages)) {
+                $this->setLocale($lang);
+
+                return $next($request);
             }
         }
-        Lang::setLocale($locale);
-        */
-        Lang::setLocale('en');
+
+        $this->setLocale(config('app.locale'));
+
         return $next($request);
+    }
+
+    protected function setLocale(string $locale): void
+    {
+        view()->share('lang', $locale);
+        Lang::setLocale($locale);
     }
 }
