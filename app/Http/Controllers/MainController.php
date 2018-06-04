@@ -31,6 +31,16 @@ class MainController extends Controller
         return view('main_v2', $this->prepareData());
     }
 
+    public function changeLang(string $lang): RedirectResponse
+    {
+        $lang = strtolower($lang);
+        if (in_array($lang, config('app.supported_locales'))) {
+            return redirect()->back()->withCookie(Cookie::forever('lang', $lang));
+        }
+
+        return redirect()->back();
+    }
+
     public function sendMail(ContactSendRequest $request): JsonResponse
     {
         Mail::send(new ContactMail($request->input('name'), $request->input('email'), $request->input('message')));

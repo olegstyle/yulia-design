@@ -10,6 +10,9 @@
 | to using a Closure or controller method. Build something great!
 |
 */
+
+Route::get('lang/{lang}', 'MainController@changeLang')->name('lang.change');
+
 Route::get('/', "MainController@indexV2");
 Route::get('/v1', "MainController@index");
 Route::get('/v2', "MainController@indexV2");
