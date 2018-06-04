@@ -69,6 +69,15 @@
             <li><a class="btn btn-link" href="#contact-me">@lang('main.contacts')</a></li>
         </ul>
 
+        <div class="language-switcher">
+            @foreach (config('app.locales') as $lang)
+                <a class="btn btn-link @if ($locale === $lang) active @endif"
+                   href="{{ route('lang.change', ['lang' => $lang]) }}">
+                    {{ strtoupper($lang) }}
+                </a>
+            @endforeach
+        </div>
+
         <div class="designer">
             <div class="designer-flowers"></div>
             <div class="designer-dark">DESIGNER</div>
