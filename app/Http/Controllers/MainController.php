@@ -123,7 +123,7 @@ class MainController extends Controller
         foreach ($projects as &$project) {
             $projectsList[$project->id] = [
                 'id' => $project->id,
-                'name' => $project->{'name_' . $locale},
+                'name' => empty($project->{'name_' . $locale}) ? $project->{'name_' . config('app.locale')} : $project->{'name_' . $locale},
                 'image_url' => $imageStorage . $project->image_url,
                 'date_start' => $project->date_start,
                 'stack' => [],
