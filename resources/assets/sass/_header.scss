@@ -351,6 +351,38 @@
       margin: 40px 10%;
       background-color: #d7d7d7;
     }
+
+    .language-switcher {
+      position: absolute;
+      top: -50px;
+      left: 0;
+      z-index: 10;
+      width: 100%;
+      text-align: center;
+
+      .language-switcher-sub {
+        display: inline-block;
+      }
+
+      .btn {
+        color: black;
+        font-weight: bold;
+        text-transform: uppercase;
+        padding: 1px 9px;
+
+        &.active {
+          @include btn_default;
+        }
+      }
+
+      @media (min-width: 970px) {
+        width: auto;
+        right: -30px;
+        top: 5px;
+        font-size: 16px;
+        text-align: right;
+      }
+    }
   }
 
   .mouse {
@@ -549,11 +581,4 @@
       }
     }
   }
-}
-
-.language-switcher {
-  position: absolute;
-  top: 60px;
-  left: 0;
-  z-index: 10;
 }

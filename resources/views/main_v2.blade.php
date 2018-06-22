@@ -70,12 +70,45 @@
         </ul>
 
         <div class="language-switcher">
-            @foreach (config('app.locales') as $lang)
-                <a class="btn btn-link @if ($locale === $lang) active @endif"
-                   href="{{ route('lang.change', ['lang' => $lang]) }}">
-                    {{ strtoupper($lang) }}
-                </a>
-            @endforeach
+            <div class="language-switcher-sub">
+                @php
+                    $locales = config('app.locales');
+                    $positionCenter = (int) floor(count($locales) / 2);
+                    $positionedLocales = [$positionCenter => $locale];
+                    $i = 0;
+                    $j = 0;
+                    foreach ($locales as $lang) {
+                        if ($locale === $lang) {
+                            $i += 1;
+                            continue;
+                        }
+
+                        $positionedLocales[$j] = $lang;
+                        $i += 1;
+                        $j += 1;
+                        if ($j === $positionCenter) {
+                            $j += 1;
+                        }
+                    }
+
+                    ksort($positionedLocales);
+                @endphp
+
+                @foreach ($positionedLocales as $lang)
+                    @if ($locale === $lang)
+                        <span class="btn btn-link active"
+                           title="Current language">
+                            {{ strtoupper($lang) }}
+                        </span>
+                    @else
+                        <a class="btn btn-link"
+                           href="{{ route('lang.change', ['lang' => $lang]) }}"
+                           title="Switch language">
+                            {{ strtoupper($lang) }}
+                        </a>
+                    @endif
+                @endforeach
+            </div>
         </div>
 
         <div class="designer">
