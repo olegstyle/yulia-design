@@ -6,13 +6,12 @@ It is my Portfolio WEB-page.
 0. `sudo chgrp -R www-data storage bootstrap/cache`
 0. `sudo chmod -R ug+rwx storage bootstrap/cache`
 0. `cp .env.example .env`
-0. `nano .env`  -- configure env (pusher keys are reuqired)
+0. `nano .env`
 0. `composer install`
 0. `php artisan key:generate`
 0. `php artisan storage:link`
 0. `php artisan voyager:install`
-0. `php artisan migrate`
-0. `php artisan db:seed`
+0. `php artisan migrate --seed`
 0. `npm install`
 0. `npm run production`
 

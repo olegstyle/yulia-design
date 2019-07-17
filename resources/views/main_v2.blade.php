@@ -7,8 +7,6 @@
 
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <link rel="icon" type="img/ico" href="{{ assert('favicon.ico') }}">
-
     <title>{{ $seo_title }}</title>
     <meta property="og:title" content="{{ $seo_title }}"/>
     <meta name="title" content="{{ $seo_title }}"/>
@@ -25,6 +23,24 @@
     <link rel="image_src" href="{{ $seo_image }}"/>
     <meta property="og:image" content="{{ $seo_image }}"/>
     <meta itemprop="image" content="{{ $seo_image }}">
+
+    <link rel="apple-touch-icon" sizes="57x57" href="{{ asset('icons/apple-icon-57x57.png') }}" />
+    <link rel="apple-touch-icon" sizes="60x60" href="{{ asset('icons/apple-icon-60x60.png') }}" />
+    <link rel="apple-touch-icon" sizes="72x72" href="{{ asset('icons/apple-icon-72x72.png') }}" />
+    <link rel="apple-touch-icon" sizes="76x76" href="{{ asset('icons/apple-icon-76x76.png') }}" />
+    <link rel="apple-touch-icon" sizes="114x114" href="{{ asset('icons/apple-icon-114x114.png') }}" />
+    <link rel="apple-touch-icon" sizes="120x120" href="{{ asset('icons/apple-icon-120x120.png') }}" />
+    <link rel="apple-touch-icon" sizes="144x144" href="{{ asset('icons/apple-icon-144x144.png') }}" />
+    <link rel="apple-touch-icon" sizes="152x152" href="{{ asset('icons/apple-icon-152x152.png') }}" />
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('icons/apple-icon-180x180.png') }}" />
+    <link rel="icon" type="image/png" sizes="192x192" href="{{ asset('icons/android-icon-192x192.png') }}" />
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('icons/favicon-32x32.png') }}" />
+    <link rel="icon" type="image/png" sizes="96x96" href="{{ asset('icons/favicon-96x96.png') }}" />
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('icons/favicon-16x16.png') }}" />
+    <link rel="manifest" href="{{ asset('icons/manifest.json') }}" />
+    <meta name="msapplication-TileColor" content="#fb658b" />
+    <meta name="msapplication-TileImage" content="{{ asset('icons/ms-icon-144x144.png') }}" />
+    <meta name="theme-color" content="#fb658b" />
 
     <script type="text/javascript">
         BODev = {};
@@ -63,31 +79,27 @@
 
     <div class="header-content">
         <div class="web-img"></div>
-        <ul class="menu">
-            <li><a class="btn btn-link" href="#portfolio">@lang('main.portfolio')</a></li>
-            <li><a class="btn btn-link btn-main" href="#about_me">@lang('main.about_me')</a></li>
-            <li><a class="btn btn-link" href="#contact-me">@lang('main.contacts')</a></li>
-        </ul>
 
         <div class="language-switcher">
             <div class="language-switcher-sub">
                 @php
                     $locales = config('app.locales');
                     $positionCenter = (int) floor(count($locales) / 2);
+                    /** @noinspection PhpUndefinedVariableInspection */
                     $positionedLocales = [$positionCenter => $locale];
                     $i = 0;
                     $j = 0;
                     foreach ($locales as $lang) {
                         if ($locale === $lang) {
-                            $i += 1;
+                            $i++;
                             continue;
                         }
 
                         $positionedLocales[$j] = $lang;
-                        $i += 1;
-                        $j += 1;
+                        $i++;
+                        $j++;
                         if ($j === $positionCenter) {
-                            $j += 1;
+                            $j++;
                         }
                     }
 
@@ -97,7 +109,7 @@
                 @foreach ($positionedLocales as $lang)
                     @if ($locale === $lang)
                         <span class="btn btn-link active"
-                           title="Current language">
+                              title="Current language">
                             {{ strtoupper($lang) }}
                         </span>
                     @else
@@ -110,6 +122,12 @@
                 @endforeach
             </div>
         </div>
+
+        <ul class="menu">
+            <li><a class="btn btn-link" href="#portfolio">@lang('main.portfolio')</a></li>
+            <li><a class="btn btn-link btn-main" href="#about_me">@lang('main.about_me')</a></li>
+            <li><a class="btn btn-link" href="#contact-me">@lang('main.contacts')</a></li>
+        </ul>
 
         <div class="designer">
             <div class="designer-flowers"></div>
