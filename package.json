@@ -15,7 +15,7 @@
   "dependencies": {
     "@fancyapps/fancybox": "^3.3.5",
     "aos": "^2.2.0",
-    "axios": "^0.18",
+    "axios": "^0.21",
     "bootstrap-sass": "^3.3.7",
     "cross-env": "^5.2",
     "jquery": "^3.2",
